@@ -1,0 +1,28 @@
+# =========================
+# Python / Django
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+V2v/
+.venv/
+
+# Django
+db.sqlite3
+db.sqlite3-journal
+media/
+
+# Migrations (optional)
+# Uncomment if you don't want migrations in git
+# */migrations/*
+# !*/migrations/__init__.py
+
+# Environment Variables
+.env
+.env.*
+*.env
+
+# Logs
+*.log

@@ -1,0 +1,406 @@
+/* TrackerJob.css */
+
+.trackerPage {
+  background-color: #f5f7fb;
+  min-height: 100vh;
+}
+
+.pageTop {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+.pageTop2 p{
+  background-color: hsla(240, 100%, 50%, 0.137);
+  height: max-content;
+  padding: 7px;
+  font-weight: 700;
+  font-family: cursive;  
+  font-size: 1rem;
+  border-radius: 10px;
+  color: black;  
+}
+.pageTop h1 {
+  font-family: cursive;
+  color: blue;
+  font-size: 2.2rem;
+  text-shadow: 0 0 1px black;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+.pageTop p {
+  color: #666;
+  margin-top: 5px;
+}
+
+/* Columns Container */
+
+.applicationContainer {
+  display: flex;
+  flex-direction: row;
+  height: 80vh;
+  max-width: 100vw;
+  gap: 20px;
+  overflow-x: scroll;
+  padding-bottom: 10px;
+}
+
+/* Individual Status Column */
+
+.status_col {
+  min-width: 280px;
+  background: white;
+  border-radius: 12px;
+  padding: 15px;
+  overflow-y: auto;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Header */
+
+#col_header {
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+#col_header h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #1f2937;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+#col_header i {
+  color: #2563eb;
+}
+
+/* Job Cards */
+
+.Jobcards {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.Jobcards > div {
+  background: #f9fafb;
+  border-left: 4px solid #2563eb;
+  border-radius: 10px;
+  padding: 12px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.Jobcards > div:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.Jobcards h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 5px;
+}
+
+.Jobcards p {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin: 3px 0;
+}
+
+/* Custom Status Colors */
+
+.status_col:nth-child(1) .Jobcards > div {
+  border-left-color: #3b82f6; /* Applied */
+}
+
+.status_col:nth-child(2) .Jobcards > div {
+  border-left-color: #f59e0b; /* Interview */
+}
+
+.status_col:nth-child(3) .Jobcards > div {
+  border-left-color: #10b981; /* Offer */
+}
+
+.status_col:nth-child(4) .Jobcards > div {
+  border-left-color: #8b5cf6; /* Accepted */
+}
+
+.status_col:nth-child(5) .Jobcards > div {
+  border-left-color: #ef4444; /* Rejected */
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .applicationContainer {
+    flex-direction: column;
+  }
+
+  .status_col {
+    width: 100%;
+    min-width: 100%;
+  }
+}
+
+
+.JobOverlay{
+  position: fixed;
+  top: 0;
+  right: 0;
+  inset: 0;
+  background-color: hwb(222 7% 85% / 0.329);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: row-reverse;
+  z-index: 999;
+}
+.jobContainer{
+  overflow-y: scroll;
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 0.5px solid #e0e0e0;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 420px;
+  border-top: 30px solid #0c447c52;
+  border-bottom: 30px solid #0c447c3b;
+  animation: leftToright .35s ease-out;
+}
+@keyframes leftToright {
+  from{
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+  to{
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+.job-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.job-company {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #111;
+  margin: 0 0 2px;
+}
+
+.job-role {
+  font-size: 18px;
+  color: #5c5c5c;
+  margin: 0 0 4px;
+}
+
+.job-date {
+  font-size: 15px;
+  color: #999;
+  margin: 0;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #888;
+  font-size: 20px;
+  padding: 0;
+  line-height: 1;
+}
+
+.divider {
+  border: none;
+  border-top: 0.5px solid #e5e5e5;
+  margin: 0 0 1.25rem;
+}
+.overlayDelete{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+}
+.overlayDelete button{
+  background-color: rgba(255, 0, 0, 0.534);
+  padding: 7px;
+  border-radius: 5px;
+  border: transparent;
+  box-shadow: 0 3px 3px black;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+.overlayDelete button:hover{
+  background-color: rgba(255, 0, 0, 0.699);
+}
+.overlayDelete button:active{
+  transform: scale(0.9);
+  box-shadow: none;
+}
+
+.section-label {
+  font-size: 13.5px;
+  color: #888;
+  margin: 0 0 10px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.status-badge{
+  color: black;
+  border-radius: 14px;
+  padding:3px 0px;
+}
+.status-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 1.25rem;
+}
+
+.status-btn {
+  border: 0.5px solid #ddd;
+  background: #f7f7f7;
+  border-radius: 8px;
+  padding: 10px 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #222;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.status-btn:hover {
+  background: #efefef;
+}
+
+/* Active states */
+.status-btn.active-applied   { border: 1.5px solid #185FA5; background: #E6F1FB; color: #0C447C; }
+.status-btn.active-interview { border: 1.5px solid #BA7517; background: #FAEEDA; color: #633806; }
+.status-btn.active-offer     { border: 1.5px solid #3B6D11; background: #EAF3DE; color: #27500A; }
+.status-btn.active-rejected  { border: 1.5px solid #A32D2D; background: #FCEBEB; color: #791F1F; }
+.status-btn.active-accepted   { border: 1.5px solid #2f2bff; background: #F1EFE8; color: #444441; }
+
+/* Dots */
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.dot-applied   { background: #185FA5; }
+.dot-interview { background: #BA7517; }
+.dot-offer     { background: #3B6D11; }
+.dot-rejected  { background: #A32D2D; }
+.dot-accepted { background: #2a1ad1; }
+
+/* Notes */
+.notes-label {
+  font-size: 12px;
+  color: #888;
+  margin: 0 0 6px;
+  font-weight: 500;
+}
+
+.notes-input {
+  width: 100%;
+  box-sizing: border-box;
+  border: 0.5px solid #ddd;
+  border-radius: 8px;
+  background: #f7f7f7;
+  color: #111;
+  font-size: 13px;
+  padding: 8px 10px;
+  resize: none;
+  outline: none;
+  font-family: inherit;
+  margin-bottom: 1rem;
+}
+
+.notes-input:focus {
+  border-color: #aaa;
+}
+
+/* Action buttons */
+.action-row {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-cancel {
+  flex: 1;
+  padding: 9px;
+  border: 0.5px solid #ddd;
+  background: none;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #666;
+  cursor: pointer;
+}
+
+.btn-cancel:hover {
+  background: #f5f5f5;
+}
+
+.btn-save {
+  flex: 2;
+  padding: 9px;
+  border: none;
+  background: #111;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn-save:hover {
+  background: #333;
+}
+.errorMsg {
+  margin-top: 20px;
+  padding: 7px;
+  font-weight: 700;
+  font-family: cursive;
+  font-size: 1rem;
+  color: rgb(255, 46, 46);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  animation: slideInOut 2s ease-out;
+}
+@keyframes slideInOut {
+  0% {
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  80% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

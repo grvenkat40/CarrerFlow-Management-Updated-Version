@@ -1,0 +1,296 @@
+.applicationPage{
+    padding: 5px;
+    align-items: center;
+}
+.applicationPageTop{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.applicationPageTop h1{
+    font-family: cursive;
+    color: blue;
+    font-size: 2.2rem;
+    text-shadow: 0 0 1px black;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.applicationPageTop button{
+    background-color: hsla(39, 100%, 50%, 0.596);
+    padding: 10px;
+    border: transparent;
+    border-radius : 10px;
+    font-size: 16px;
+    font-weight: 550;
+    box-shadow: 0 2px 3px black;
+    transition: all 0.2s ease;
+}
+.applicationPageTop button:active{
+  transform: scale(0.9);
+  box-shadow: 0 5px 0px black;
+}
+.applicationPageTop button:hover{
+  background-color: hsla(39, 100%, 50%, 0.788);
+}
+
+
+.savedapplicationContainer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.applicationCard {
+  background: #fff;
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 0 5px hsla(0, 0%, 0%, 0.151);
+}
+
+.applicationCard:hover .deleteApp{
+    opacity: 1;
+    visibility: visible;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.companyInitials {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #2563eb;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardTitle {
+  flex: 1;
+  margin-left: 12px;
+}
+
+.cardTitle h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.cardTitle p {
+  margin: 4px 0 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.deleteApp {
+    visibility: hidden;
+    cursor: pointer;
+    font-size: 18px;
+    color: #ef4444;
+    text-decoration: none;
+    transition: 0.2s;
+    opacity: 0;
+}
+
+.deleteApp:hover {
+  transform: scale(1.03);
+  text-shadow: 0 0 10px red;
+}
+
+.cardDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.cardDetails span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #353535;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.cardFooter {
+  margin-top: 16px;
+  padding-top: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-top: 1px solid #eee;
+}
+.cardFooter p{
+    align-items: center;
+}
+.cardFooter button{
+    background-color: hsla(221, 83%, 53%, 0.445);
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 1.15rem;
+    border: transparent;
+    transition: box-shadow .2s ease;
+    cursor: pointer;
+}
+.cardFooter button:hover{
+  background-color: hsla(221, 83%, 53%, 0.74);
+}
+.cardFooter button:active{
+    transform: scale(0.9);
+    box-shadow: 0 3px 3px black;
+}
+.cardDate {
+  font-size: 13px;
+  color: #888;
+}
+
+.noApplications {
+  width: 100%;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.noApplications h3 {
+  color: #777;
+  font-weight: 500;
+}
+
+.displayMsg p{
+  position: fixed;
+  top: 70px;
+  right: 60px;
+  color: rgb(0, 0, 0);
+  backdrop-filter: blur(10px);
+  border: 1px solid hsla(0, 0%, 0%, 0.267);
+  border-radius: 10px;
+  padding: 10px;
+  font-weight: 600;
+}
+
+/* Overlay */
+
+.applicationOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.42);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+}
+
+.applicationContainerr {
+  background: #fff;
+  border: 0.5px solid rgba(0, 0, 0, 0.12);
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.appHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.appHeader h2 {
+  font-size: 20px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.appHeader h2 hr {
+  width: 50px;
+  border: none;
+  border-top: 0.5px solid rgba(0, 0, 0, 0.12);
+}
+
+.closeBtn {
+  font-size: 14px;
+  color: #999;
+  cursor: pointer;
+  padding: 2px 5px;
+  border-radius: 4px;
+  transition: color 0.15s, background 0.15s;
+}
+
+.closeBtn:hover {
+  color: #e94432;
+  background: #fdecea;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.formField {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.formField label {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}
+
+.formField input,
+.formField select {
+  height: 36px;
+  padding: 0 13px;
+  font-size: 14px;
+  border: 0.5px solid rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  background: #f7f7f7;
+  color: #111;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  width: 100%;
+}
+
+.formField input:focus,
+.formField select:focus {
+  border-color: rgba(0, 0, 0, 0.35);
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.06);
+}
+
+.applicationContainerr button {
+  width: 100%;
+  height: 36px;
+  background: #111;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.applicationContainerr button:hover { opacity: 0.82; }
+.applicationContainerr button:active { opacity: 0.65; }
