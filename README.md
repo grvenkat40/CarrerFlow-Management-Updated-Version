@@ -147,6 +147,28 @@ CareerFlow/
 
 ---
 
+## Images
+### Landing Page
+<img width="1366" height="635" alt="image" src="https://github.com/user-attachments/assets/a853d15f-c8b0-491e-b78a-6f7dcb2d9eb4" />
+
+### Dashboard Page
+<img width="1366" height="635" alt="image" src="https://github.com/user-attachments/assets/9acbf4af-c36a-4f6c-9392-4ab93f67c0b1" />
+
+### Skills Page
+<img width="1366" height="634" alt="image" src="https://github.com/user-attachments/assets/d5b21643-b2e5-4c69-932e-762db630093f" />
+
+### Job Application Creation Page
+<img width="1366" height="633" alt="image" src="https://github.com/user-attachments/assets/da52c5ef-d0f1-48c3-a401-7b2d7b244f15" />
+
+### Job Tracker
+<img width="1366" height="635" alt="image" src="https://github.com/user-attachments/assets/509114ca-06d4-498a-9cdf-5ce8b3db7780" />
+
+### Status Updation
+<img width="1366" height="632" alt="image" src="https://github.com/user-attachments/assets/c8b26390-5d4d-48ba-8480-0eaef108830f" />
+
+
+
+
 ## ⚙️ Installation
 
 ### Clone Repository
